@@ -50,3 +50,12 @@ uv run --with jupyter jupyter lab
 
 
 You should see a notebook with the option to switch between Rust, Python, and R kernels.
+
+<img src="png/jupyter-notebook-with-rust-r-python-kernels.png" />
+
+Kernels
+
+<img src="png/jupyter-several-kernels.png" />
+
+
+			
