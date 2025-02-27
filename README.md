@@ -17,6 +17,7 @@ cd notebook_hello
 ```
 uv add --dev ipykernel
 uv run ipython kernel install --user --name notebook_hello
+uv run --python 3.13 --with jupyter jupyter-kernelspec list
 uv run --python 3.13 --with jupyter jupyter lab
 ```
 
@@ -38,7 +39,19 @@ cargo install jupyter
 cargo install evcxr_jupyter
 ```
 
-6. Run the notebook server
+6. Set up the Clojure kernel
+
+ - See [https://github.com/clojupyter/clojupyter?tab=readme-ov-file#installation](https://github.com/clojupyter/clojupyter?tab=readme-ov-file#installation) for detailed instructions.
+ 
+ ```
+git clone https://github.com/clojupyter/clojupyter.git
+cd clojupyter
+clj -T:build uber
+uv run --python 3.13 --with jupyter jupyter-kernelspec l
+uv run --python 3.13 --with jupyter jupyter lab
+``` 
+
+7. Run the notebook server
 
 ```
 uv run --with jupyter jupyter lab
